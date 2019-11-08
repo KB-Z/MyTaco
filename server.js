@@ -11,17 +11,25 @@ const PORT = process.env.PORT;
 console.log(PORT);
 
 const MONGODB_URI = process.env.MONGODB_URI;
-console.log(MONGODB_URI);
 
-// app.use(express.urlencoded({extended:true}));
-// app.use(methodOverride('_method'));
-// app.use(session({
-//   secret:'feedmeseymour',
-//   resave:false,
-//   saveUninitialized:false
-// }));
+mongoose.connect(MONGODB_URI, { useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify:false, useCreateIndex:true }, () => {
+    console.log('connected to mongoose');
+  });
 
+app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'));
+app.use(express.static('public'));
+// app.use(express.json());
+app.use(session({
+  secret:'feedmeseymour',
+  resave:false,
+  saveUninitialized:false
+}));
 
-// app.listen(3000, (req, res) => {
-//   console.log('Hola!');
-// });
+app.get('/', (req, res) => {
+  res.send('Hola!');
+})
+
+app.listen(PORT, () => {
+  console.log('Hola!');
+});
