@@ -27,7 +27,7 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-  res.send('Hola!');
+  res.render(home.ejs);
 })
 
 app.listen(PORT, () => {
