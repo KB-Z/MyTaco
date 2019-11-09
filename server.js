@@ -27,7 +27,7 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-  res.render(home.ejs);
+  res.render('home.ejs');
 })
 
 app.listen(PORT, () => {
