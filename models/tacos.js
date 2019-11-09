@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
 const tacoSchema = new mongoose.Schema({
-  title:String,
-  entry:String,
-  shipIsBroken:{type:Boolean, default:true}
+  base:[type:String, required:true],
+  seasoning:[type:String, required:true],
+  mixin:[type:String, required:true],
+  shell:[type:String, required:true],
+  condiment:[type:String, required:true],
 },{timestamps:true});
 
 const Taco = mongoose.model('Taco', tacoSchema);
