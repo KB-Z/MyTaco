@@ -1,0 +1,109 @@
+* {
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+  background: #F1E8B8;
+  text-align: center;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: lighter;
+  color: tomato;
+  font-size: 140px;
+  text-shadow: 7px 3px 9px rgba(255,99,71,0.39);
+  margin-bottom: 25px;
+}
+
+h4 {
+  color: tomato;
+  text-shadow: 7px 3px 9px rgba(255,99,71,0.39);
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  /* background-color: Gainsboro; */
+  /* font-style: italic; */
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgba(86,66,86,0.9);
+  color: #F9E784;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  transition-duration: 0.4s;
+}
+
+span {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Indie Flower', cursive;
+  font-style: bold;
+}
+
+.tacoText {
+  color: tomato;
+  font-family: 'Pacifico', cursive;
+}
+
+.findTaco {
+  margin: 0;
+}
+
+.taco {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 500px;
+  border: 10px double rgba(255,99,71,0.48);
+  border-radius: 20px 40px 20px 40px;
+  /* border: 6px solid tomato; */
+  background: #F9E784 url('img/taco-cute-cartoon.png') no-repeat scroll -10px -10px;
+  background-size: 25%;
+  box-shadow: 10px 3px 17px 9px rgba(0,0,0,0.37);
+}
+
+button:hover {
+  background-color: rgba(86,66,86,1);
+  /* color: tomato; */
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #F1E8B8;
+  text-align: center;
+}
+
+#navbar button {
+  float: none;
+  display: inline;
+  /* color: #191919; */
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 60px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}

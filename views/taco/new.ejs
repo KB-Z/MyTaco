@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <h1>New Taco</h1>
+    <form action="/taco" method="POST">
+      Base: <input type="text" name="base"><br>
+      Seasoning: <input type="text" name="seasoning"><br>
+      Mix-in: <input type="text" name="mixin"><br>
+      Shell: <input type="text" name="shell"><br>
+      Condiment: <input type="text" name="condiment"><br>
+      <input type="submit" value="Create New Taco">
+    </form>
+    <nav>
+      <a href="/taco">Back to My Tacos</a>
+    </nav>
+  </body>
+</html>

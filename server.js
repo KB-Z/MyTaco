@@ -18,13 +18,23 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser:true, useUnifiedTopology:true, u
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use('/', express.static(__dirname));
 // app.use(express.json());
 app.use(session({
   secret:'feedmeseymour',
   resave:false,
   saveUninitialized:false
 }));
+
+const tacoController = require('./controllers/taco.js');
+app.use('/taco', tacoController);
+
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
   res.render('home.ejs');
