@@ -18,8 +18,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser:true, useUnifiedTopology:true, u
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
-// app.use(express.static('public'));
-app.use('/', express.static(__dirname));
+app.use(express.static('public'));
 // app.use(express.json());
 app.use(session({
   secret:'feedmeseymour',

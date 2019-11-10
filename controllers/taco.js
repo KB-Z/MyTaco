@@ -4,7 +4,6 @@ const router = express.Router();
 
 router.get('/new_taco', (req, res) => {
   res.render('taco/new.ejs');
-  // res.redirect('/Taco');
 });
 
 router.get('/:id/edit', (req, res) => {
@@ -31,7 +30,7 @@ router.put('/:id', (req, res) => {
     req.body,
     {new:true},
     (err, updatedModel) => {
-      res.redirect('/taco');
+      res.redirect('/');
     })
   });
 
@@ -41,7 +40,7 @@ router.put('/:id', (req, res) => {
     });
   });
 
-  router.post('/taco', (req, res) => {
+  router.post('/', (req, res) => {
     Taco.create(req.body, (err, newTaco) => {
       res.redirect('/');
     })
