@@ -48,7 +48,7 @@ router.put('/:id', (req, res) => {
 
   router.get('/', (req, res) => {
     Taco.find({}, (err, allTacos) => {
-      res.render('taco/index.ejs', {Tacos:allTacos, username:req.session.username});
+      res.render('taco/index.ejs', {tacos:allTacos, username:req.session.username});
     });
   });
 

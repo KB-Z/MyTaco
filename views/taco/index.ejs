@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+<body>
+  <h1>Taco Index Page</h1>
+  <% if(username){ %>
+    Welcome, <%=username%>
+  <%}%>
+  <ul>
+    <% for (let i = 0; i < tacos.length; i++) {%>
+      <li>
+        A <%=tacos[i].base%> with <%=tacos[i].seasoning%>, some <%=tacos[i].mixin%> mixed in, inside a <%=tacos[i].shell%> and topped with <%=tacos[i].condiment%>!
+            <form action="/taco/<%=tacos[i].id%>?_method=DELETE" method="POST">
+              <input type="submit" value="Delete Taco">
+            </form>
+            <a href="/taco/<%=tacos[i].id%>/edit">Edit Taco</a>
+          </li>
+          <%}%>
+        </ul>
+        <nav>
+          <a href="/taco/new">Create A New Taco</a>
+        </nav>
+      </body>
+      </html>
