@@ -4,13 +4,11 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <h1>My Taco</h1>
+    <h4>My Taco</h4>
     <nav>
-      <ul>
-        <li><a href="/sessions/new">Log In</a></li>
-        <li><a href="/users/new">Sign Up</a></li>
-        <li><a href="/sessions/users">User Management</a></li>
-      </ul>
+        <button onclick="window.location.href = '/sessions/new'" class="login">Log In</button>
+        <button onclick="window.location.href = '/users/new'" class="signUp">Create Account</button>
+        <button onclick="window.location.href = '/sessions/users'" class="admin">Admin</button>
     </nav>
   </body>
 </html>

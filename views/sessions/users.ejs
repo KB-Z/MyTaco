@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <h4>User Edit Page</h4>
+    <ul>
+      <% for (let i = 0; i < users.length; i++) {%>
+        <li>
+          <%=users[i].username%>
+          <form action="/sessions/<%=users[i].id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE User <%=users[i].username%>">
+          </form>
+        </li>
+        <%}%>
+      </ul>
+      <nav>
+        <button onclick="window.location.href = '/'" class="home">Return to Main</button>
+      </nav>
+  </body>
+</html>
