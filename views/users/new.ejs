@@ -5,15 +5,15 @@
 </head>
 <body>
   <h4>Create New User</h1>
+  <nav>
+    <button onclick="window.location.href = '/'" class="home">Return to Main</button>
+  </nav><br>
   <form action="/users" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username"><br><br>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password"><br>
-    <input type="submit" value="New User">
+    <input type="submit" value="Create New User">
   </form>
-  <nav>
-    <button onclick="window.location.href = '/'" class="home">Return to Main</button>
-  </nav>
 </body>
 </html>

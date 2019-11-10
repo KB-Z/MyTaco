@@ -4,10 +4,15 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <h1>Log In</h1>
+    <h4>Log In</h4>
+    <nav>
+      <button onclick="window.location.href = '/'" class="home">Return to Main</button>
+    </nav><br>
     <form action="/sessions" method="post">
-        Username: <input type="text" name="username"><br>
-        Password: <input type="password" name="password"><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="username">Username:</label>
+        <input type="password" id="password" name="password"><br>
         <input type="submit" value="Log In">
     </form>
   </body>

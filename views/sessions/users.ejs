@@ -5,6 +5,9 @@
   </head>
   <body>
     <h4>User Edit Page</h4>
+    <nav>
+      <button onclick="window.location.href = '/'" class="home">Return to Main</button>
+    </nav><br>
     <ul>
       <% for (let i = 0; i < users.length; i++) {%>
         <li>
@@ -15,8 +18,5 @@
         </li>
         <%}%>
       </ul>
-      <nav>
-        <button onclick="window.location.href = '/'" class="home">Return to Main</button>
-      </nav>
   </body>
 </html>
