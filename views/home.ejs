@@ -4,7 +4,7 @@
   <% include ./partials/head.ejs %>
 </head>
 <body>
-  <h2>My Taco</h2>
+  <h2>My Taco!</h2>
   <nav id="navbar">
     <%if(username){%>
       <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
@@ -12,7 +12,7 @@
         <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
         <%}%>
         <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">New Taco</button>
-        <button onclick="window.location.href = '/'" class="home">Main</button>
+        <button onclick="window.location.href = '/taco'" class="index">Tacos!</button>
         <%if(username === "zdonner"){%>
           <button onclick="window.location.href = '/sessions/users'" class="admin">Admin</button>
           <%}%>

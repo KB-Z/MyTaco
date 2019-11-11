@@ -1,0 +1,9 @@
+<%
+  var save = saveTaco() {
+    if (typeof(Storage) !== "undefined") {
+      localStorage.tacoid = tacoid
+    }else{
+      alert('error!')
+    }
+  }
+%>
