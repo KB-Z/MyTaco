@@ -18,12 +18,6 @@ router.delete('/:id', (req, res) => {
   })
 });
 
-router.get('/:id', (req, res) => {
-  Taco.findById(req.params.id, (err, foundTaco) => {
-    res.render('taco/show.ejs', {Taco:foundTaco});
-  })
-});
-
 router.put('/:id', (req, res) => {
   Taco.findByIdAndUpdate(
     req.params.id,
@@ -34,9 +28,9 @@ router.put('/:id', (req, res) => {
     })
   });
 
-  router.get('/:id', (req, res) => {
-    Taco.findById(req.params.id, (err, foundTaco) => {
-      res.render('taco/show.ejs', {Taco:foundTaco});
+  router.get('/my_tacos', (req, res) => {
+    Taco.find({}, (err, allTacos) => {
+      res.render('taco/show.ejs', {tacos:allTacos, username:req.session.username});
     });
   });
 

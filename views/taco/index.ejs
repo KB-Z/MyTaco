@@ -6,13 +6,16 @@
 <body>
   <%if(username){%>
     <h1><%=username%>'s Taco Page</h1>
-  <%}%>
+    <%}%>
     <nav id="navbar">
-      <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
-      <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
-      <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">New Taco</button>
-      <button onclick="window.location.href = '/'" class="home">Main</button>
-    </nav>
+      <%if(username){%>
+        <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
+        <%}else{%>
+          <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
+          <%}%>
+          <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">New Taco</button>
+          <button onclick="window.location.href = '/'" class="home">Main</button>
+        </nav>
     <div class="container">
       <% for (let i = 0; i < tacos.length; i++) {%>
         <div class="taco">

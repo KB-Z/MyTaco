@@ -36,7 +36,7 @@ const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
-  res.render('home.ejs');
+  res.render('home.ejs', {username:req.session.username});
 });
 
 app.listen(PORT, () => {
