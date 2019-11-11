@@ -16,6 +16,15 @@ h1 {
   margin-bottom: 25px;
 }
 
+h2 {
+  font-style: italic;
+  font-weight: lighter;
+  color: tomato;
+  font-size: 100px;
+  text-shadow: 7px 3px 9px rgba(255,99,71,0.39);
+  margin-bottom: 25px;
+}
+
 h4 {
   color: tomato;
   text-shadow: 7px 3px 9px rgba(255,99,71,0.39);
