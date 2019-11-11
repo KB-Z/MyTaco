@@ -17,10 +17,8 @@
     <div class="container">
       <% for (let i = 0; i < tacos.length; i++) {%>
         <div class="taco">
-          <div class="tacoDesc">
-            <span class="tacoSpan">A <%=tacos[i].base%> with <%=tacos[i].seasoning%>, </span>
-            <span class="tacoSpan">some <%=tacos[i].mixin%> mixed in, inside a <%=tacos[i].shell%> </span>
-            <span class="tacoSpan">and topped with <%=tacos[i].condiment%>!</span>
+          <div class="tacoDescCont">
+            <p class="tacoDesc">A <span class="tacoSpan"><%=tacos[i].base%></span> with <span class="tacoSpan"><%=tacos[i].seasoning%></span>, some <span class="tacoSpan"><%=tacos[i].mixin%></span> mixed in, inside a <span class="tacoSpan"><%=tacos[i].shell%></span> <span class="tacoSpan">and topped with <%=tacos[i].condiment%>!</span></p>
           </div>
           <nav class="tacoNav">
             <button onclick="window.location.href = '/taco/<%=tacos[i].id%>/edit'" class="edit">Edit Taco</button>
