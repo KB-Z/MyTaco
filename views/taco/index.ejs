@@ -8,6 +8,11 @@
   <% if(username){ %>
     Welcome, <%=username%>
   <%}%>
+  <nav>
+    <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
+    <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">Create a New Taco</button>
+    <button onclick="window.location.href = '/'" class="home">Main</button>
+  </nav>
   <ul>
     <% for (let i = 0; i < tacos.length; i++) {%>
       <li>
@@ -15,12 +20,9 @@
             <form action="/taco/<%=tacos[i].id%>?_method=DELETE" method="POST">
               <input type="submit" value="Delete Taco">
             </form>
-            <a href="/taco/<%=tacos[i].id%>/edit">Edit Taco</a>
+            <button onclick="window.location.href = '/taco/<%=tacos[i].id%>/edit'" class="edit">Edit Taco</button>
           </li>
           <%}%>
         </ul>
-        <nav>
-          <a href="/taco/new">Create A New Taco</a>
-        </nav>
       </body>
       </html>

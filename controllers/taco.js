@@ -8,7 +8,7 @@ router.get('/new_taco', (req, res) => {
 
 router.get('/:id/edit', (req, res) => {
   Taco.findById(req.params.id, (err, foundTaco) => {
-    res.render('taco/edit.ejs', {Taco:foundTaco});
+    res.render('taco/edit.ejs', {taco:foundTaco});
   })
 });
 
