@@ -66,9 +66,26 @@ input[type=submit] {
   justify-content: center;
 }
 
+.tacoEdit {
+  margin: 20px 12px 20px 12px;
+  height: 300px;
+  width: 500px;
+  border: 10px double rgba(255,99,71,0.48);
+  border-radius: 20px 40px 20px 40px;
+  background: #F9E784 url('img/taco-cute-cartoon.png') no-repeat scroll -10px -10px;
+  background-size: 25%;
+  box-shadow: 10px 3px 17px 9px rgba(0,0,0,0.37);
+}
+
+.tacoEdit > form {
+  margin-top: 10%;
+  font-size: 18px;
+}
+
 .taco {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 20px 12px 20px 12px;
   height: 300px;
   width: 500px;

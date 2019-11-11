@@ -10,13 +10,17 @@
     <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">Create a New Taco</button>
     <button onclick="window.location.href = '/'" class="home">Main</button>
   </nav>
-  <form action="/taco/<%=taco.id%>?_method=PUT" method="POST">
-    Base: <input type="text" name="base" value="<%=taco.base%>" placeholder="<%=taco.base%>"><br>
-    Seasoning: <input type="text" name="seasoning" value="<%=taco.seasoning%>" placeholder="<%=taco.seasoning%>"><br>
-    Mix-in: <input type="text" name="mixin" value="<%=taco.mixin%>" placeholder="<%=taco.mixin%>"><br>
-    Shell: <input type="text" name="shell" value="<%=taco.shell%>" placeholder="<%=taco.shell%>"><br>
-    Condiment: <input type="text" name="condiment" value="<%=taco.condiment%>" placeholder="<%=taco.condiment%>"><br>
-    <input type="submit" value="Submit Changes">
-  </form>
+  <div class="container">
+    <div class="tacoEdit">
+      <form action="/taco/<%=taco.id%>?_method=PUT" method="POST">
+        Base: <input type="text" name="base" value="<%=taco.base%>" placeholder="<%=taco.base%>"><br>
+        Seasoning: <input type="text" name="seasoning" value="<%=taco.seasoning%>" placeholder="<%=taco.seasoning%>"><br>
+        Mix-in: <input type="text" name="mixin" value="<%=taco.mixin%>" placeholder="<%=taco.mixin%>"><br>
+        Shell: <input type="text" name="shell" value="<%=taco.shell%>" placeholder="<%=taco.shell%>"><br>
+        Condiment: <input type="text" name="condiment" value="<%=taco.condiment%>" placeholder="<%=taco.condiment%>"><br>
+        <input type="submit" value="Submit Changes">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

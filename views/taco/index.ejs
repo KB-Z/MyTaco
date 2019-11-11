@@ -4,10 +4,9 @@
   <% include ../partials/head.ejs %>
 </head>
 <body>
-  <h1>Taco Index Page</h1>
-  <% if(username){ %>
-    Welcome, <%=username%>
-    <%}%>
+  <%if(username){%>
+    <h1><%=username%>'s Taco Page</h1>
+  <%}%>
     <nav id="navbar">
       <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
       <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
