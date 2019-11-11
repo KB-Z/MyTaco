@@ -14,7 +14,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   Taco.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect('/');
+    res.redirect('/taco');
   })
 });
 
@@ -30,7 +30,7 @@ router.put('/:id', (req, res) => {
     req.body,
     {new:true},
     (err, updatedModel) => {
-      res.redirect('/');
+      res.redirect('/taco');
     })
   });
 
@@ -42,7 +42,7 @@ router.put('/:id', (req, res) => {
 
   router.post('/', (req, res) => {
     Taco.create(req.body, (err, newTaco) => {
-      res.redirect('/');
+      res.redirect('/taco');
     })
   });
 

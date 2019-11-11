@@ -7,23 +7,29 @@
   <h1>Taco Index Page</h1>
   <% if(username){ %>
     Welcome, <%=username%>
-  <%}%>
-  <nav>
-    <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
-    <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
-    <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">Create a New Taco</button>
-    <button onclick="window.location.href = '/'" class="home">Main</button>
-  </nav>
-  <ul>
-    <% for (let i = 0; i < tacos.length; i++) {%>
-      <li>
-        A <%=tacos[i].base%> with <%=tacos[i].seasoning%>, some <%=tacos[i].mixin%> mixed in, inside a <%=tacos[i].shell%> and topped with <%=tacos[i].condiment%>!
-            <form action="/taco/<%=tacos[i].id%>?_method=DELETE" method="POST">
-              <input type="submit" value="Delete Taco">
-            </form>
-            <button onclick="window.location.href = '/taco/<%=tacos[i].id%>/edit'" class="edit">Edit Taco</button>
-          </li>
+    <%}%>
+    <nav id="navbar">
+      <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
+      <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
+      <button onclick="window.location.href = '/taco/new_taco'" class="newTaco">Create a New Taco</button>
+      <button onclick="window.location.href = '/'" class="home">Main</button>
+    </nav>
+    <div class="taco">
+        <% for (let i = 0; i < tacos.length; i++) {%>
+            <div class="tacoDesc">
+              <span class="tacoSpan">A <%=tacos[i].base%> with <%=tacos[i].seasoning%>, </span>
+              <span class="tacoSpan">some <%=tacos[i].mixin%> mixed in, inside a <%=tacos[i].shell%> </span>
+              <span class="tacoSpan">and topped with <%=tacos[i].condiment%>!</span>
+            </div>
+            <nav class="tacoNav">
+              <button onclick="window.location.href = '/taco/<%=tacos[i].id%>/edit'" class="edit">Edit Taco</button>
+              <div class="tacoDel">
+                <form action="/taco/<%=tacos[i].id%>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete Taco">
+                </form>
+              </div>
+            </nav>
           <%}%>
-        </ul>
-      </body>
-      </html>
+      </div>
+    </body>
+    </html>

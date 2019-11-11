@@ -37,8 +37,19 @@ app.use('/sessions', sessionsController);
 
 app.get('/', (req, res) => {
   res.render('home.ejs');
-})
+});
 
 app.listen(PORT, () => {
   console.log('Hola!');
 });
+
+  // window.onscroll = function() {stickyNav()};
+  // var navbar = document.getElementById("navbar");
+  // var sticky = navbar.offsetTop;
+  // function stickyNav() {
+  //   if (window.pageYOffset >= sticky) {
+  //     navbar.classList.add("sticky")
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //   }
+  // }

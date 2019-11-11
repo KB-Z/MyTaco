@@ -67,16 +67,19 @@ input[type=submit] {
   font-size: 15px;
 }
 
-.tacoText {
+/* .tacoText {
   color: tomato;
   font-family: 'Pacifico', cursive;
-}
+} */
 
-.findTaco {
+/* .findTaco {
   margin: 0;
-}
+} */
 
 .taco {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: auto;
@@ -89,6 +92,31 @@ input[type=submit] {
   background: #F9E784 url('img/taco-cute-cartoon.png') no-repeat scroll -10px -10px;
   background-size: 25%;
   box-shadow: 10px 3px 17px 9px rgba(0,0,0,0.37);
+}
+
+.tacoDesc {
+  margin: 12% 0 5% 0;
+  /* align-content: stretch; */
+  font-size: 20px;
+}
+
+.tacoSpan {
+  /* font-size: 15px; */
+}
+
+.tacoNav {
+  /* margin: 25% 20% 5% 20%; */
+  height: 20%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.tacoNav button {
+  margin: auto 0;
+}
+.tacoDel input {
+  margin: 5px auto;
 }
 
 button:hover {
@@ -109,7 +137,7 @@ button:hover {
   text-align: center;
   padding: 14px;
   text-decoration: none;
-  width: 50%;
+  width: 15%;
 }
 
 .sticky {
