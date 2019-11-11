@@ -16,12 +16,6 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser:true, useUnifiedTopology:true, u
     console.log('connected to mongoose');
   });
 
-app.locals.saveTaco = () => {
-  if (typeof(Storage) !== "undefined") {
-    localStorage.tacoid = tacoid
-  }
-};
-
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
