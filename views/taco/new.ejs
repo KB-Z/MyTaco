@@ -7,17 +7,19 @@
   <h2>New Taco</h2>
   <nav>
     <button onclick="window.location.href = '/taco'" class="index">Taco Index</button>
+    <%if(username){%>
     <button onclick="window.location.href = '/taco/my_tacos'" class="userCp">My Taco's</button>
+    <%}%>
   </nav>
   <div class="container">
     <div class="tacoNew">
       <h4>Create a NEW Taco!</h4>
       <form action="/taco" method="POST">
         Base: <input type="text" name="base"><br>
-        Seasoning: <input type="text" name="seasoning"><br>
-        Mix-in: <input type="text" name="mixin"><br>
-        Shell: <input type="text" name="shell"><br>
+        Seasoing: <input type="text" name="seasoning"><br>
+        Mixin: <input type="text" name="mixin"><br>
         Condiment: <input type="text" name="condiment"><br>
+        Shell: <input type="text" name="shell"><br>
         <input type="submit" value="Create New Taco">
       </form>
     </div>

@@ -8,12 +8,17 @@
   <nav>
     <button onclick="window.location.href = '/'" class="home">Return to Main</button>
   </nav><br>
-  <form action="/users" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username"><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br>
-    <input type="submit" value="Create New User">
-  </form>
+  <div class="container">
+    <div class="user">
+      <h4>Create New User</h4>
+      <form action="/users" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Create New User">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

@@ -3,7 +3,7 @@ const Taco = require('../models/tacos.js')
 const router = express.Router();
 
 router.get('/new_taco', (req, res) => {
-  res.render('taco/new.ejs');
+  res.render('taco/new.ejs', {username:req.session.username});
 });
 
 router.get('/:id/edit', (req, res) => {
