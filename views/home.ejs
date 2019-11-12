@@ -8,6 +8,8 @@
   <nav id="navbar">
     <%if(username){%>
       <button onclick="window.location.href = '/sessions/logout'" class="logout">Logout</button>
+      <button onclick="window.location.href = '/taco/my_tacos'" class="userCp">My Taco's</button>
+      <button onclick="window.location.href = '/taco'" class="index">Taco Index</button>
       <%}else{%>
         <button onclick="window.location.href = '/sessions/new'" class="login">Login</button>
         <button onclick="window.location.href = '/users/new'" class="login">Create Account</button>
