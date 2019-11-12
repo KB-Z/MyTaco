@@ -27,7 +27,7 @@
                 </div>
                 <nav class="tacoNav">
                   <button onclick="window.location.href = '/taco/<%=tacos[i].id%>/edit'" class="edit">Edit Taco</button>
-                  <button type="button" onclick="saveTaco()"><%let tacoid=tacos[i].id%>Save</button>
+                  <button type="button" onclick="saveTaco('<%=tacos[i].id%>')">Save Taco</button>
                   <div class="tacoDel">
                     <form action="/taco/<%=tacos[i].id%>?_method=DELETE" method="POST">
                       <input type="submit" value="Delete Taco">
@@ -38,8 +38,9 @@
               <%}%>
             </div>
             <script>
-              const saveTaco = () => {
-                localStorage.tacoId = tacoid
+              const saveTaco = (tacoThings) => {
+                console.log(tacoThings);
+                localStorage.tacoId = tacoThings
               };
             </script>
           </body>
